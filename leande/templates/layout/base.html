@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLeande</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/layout/base.css')}}">
+    {% block css %} {% endblock %}
+</head>
+<body>
+
+<!--block header -->
+{% block header %}
+{% include 'layout/header.html' %}
+{% endblock %}
+
+<!--blpck content-->
+{% block content %} {% endblock %}
+
+<!--block footer -->
+{% block footer %}
+{% include 'layout/footer.html' %}
+{% endblock %}
+
+{% block js %} {% endblock %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--color-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: solid 3px white;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--color-item);
+}
+
+
+header .account {
+
+}
+
+
+header .account button{
+    height: 40px;
+    width: 120px;
+    background-color: var(--color-item);
+    color: white;
+     border-radius: 15px;
+}

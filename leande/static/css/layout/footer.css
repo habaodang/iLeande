@@ -1,0 +1,66 @@
+/* Cấu trúc chung */
+.information-footer {
+    background-color: var(--color-footer);
+    color: #ecf0f1;
+
+}
+
+/* Container cho các section trong footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Các phần tử trong footer */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Tiêu đề trong từng phần */
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Danh sách liên kết */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #f39c12;
+}
+
+/* Định dạng cho phần footer dưới cùng */
+.information-footer .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Responsive - Đảm bảo footer hiển thị tốt trên các màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
