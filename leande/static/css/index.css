@@ -1,61 +1,198 @@
-/* Giới thiệu */
+/* index.css */
+
+/* Phần giới thiệu */
 #intro {
-    background-color: #f8f9fa;
-    padding: 80px 20px;
-    text-align: center;
+    padding: 40px 0;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #eef0f2;
 }
 
 .intro-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.intro-text {
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-}
-
-.intro-text h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.intro-text p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.intro-text .btn-primary {
-    padding: 15px 30px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.intro-text .btn-primary:hover {
-    background-color: #2980b9;
-}
-
-.intro-image {
-    flex: 1;
+    padding: 0 20px;
     text-align: center;
 }
 
-.intro-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.intro-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.intro-text .lead {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Phần danh sách bài viết */
+#blog-posts {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2:after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+}
+
+/* Thiết kế bài viết */
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #eef0f2;
+    transition: all 0.3s ease;
+}
+
+.post-item:hover {
+    background-color: #f9fafb;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+}
+
+.post-time {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    margin: 0 0 12px 0;
+}
+
+.post-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: #3498db;
+}
+
+.post-tags {
+    margin-bottom: 12px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #eef0f2;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #666;
+    margin-right: 5px;
+}
+
+.post-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.post-stats span {
+    display: flex;
+    align-items: center;
+}
+
+.post-stats span i {
+    margin-right: 5px;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #eef0f2;
+}
+
+.page-link.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.page-link.next {
+    width: auto;
+    padding: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-item {
+        padding: 15px 10px;
+    }
+    
+    .post-title {
+        font-size: 1.1rem;
+    }
 }
