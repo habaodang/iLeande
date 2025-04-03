@@ -1,0 +1,219 @@
+{% extends "layout/base.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/post.css')}}">
+{% endblock %}
+{% block content %}
+<section id="post-header">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Trang chủ</a> / 
+            <a href="/category/development">Development</a> / 
+            <span>RAG, AI Agents và Agentic RAG</span>
+        </div>
+        
+        <h1 class="post-title">RAG, AI Agents và Agentic RAG – Chúng là gì và hoạt động như thế nào?</h1>
+        
+        <div class="post-meta">
+            <div class="author">
+                <img src="{{ url_for('static',filename='images/avatar2.jpg')}}" class="avatar" alt="Vũ Tuấn">
+                <div class="author-info">
+                    <a href="/author/vu-tuan" class="author-name">Vũ Tuấn</a>
+                    <span class="post-time">Đăng ngày 03/04/2025 - 5 phút đọc</span>
+                </div>
+            </div>
+            
+            <div class="post-actions">
+                <button class="btn-action"><i class="fas fa-bookmark"></i> Lưu</button>
+                <button class="btn-action"><i class="fas fa-share"></i> Chia sẻ</button>
+            </div>
+        </div>
+        
+        <div class="post-tags">
+            <a href="/tags/ai" class="tag">AI</a>
+            <a href="/tags/rag" class="tag">RAG</a>
+            <a href="/tags/development" class="tag">Development</a>
+        </div>
+    </div>
+</section>
+
+<section id="post-content">
+    <div class="container">
+        <div class="content">
+            <p class="intro-paragraph">
+                Retrieval-Augmented Generation (RAG), AI Agents và Agentic RAG là những khái niệm đang rất được quan tâm trong lĩnh vực trí tuệ nhân tạo. Trong bài viết này, chúng ta sẽ tìm hiểu chi tiết về ba công nghệ này và cách chúng đang định hình tương lai của AI.
+            </p>
+            
+            <h2>1. Retrieval-Augmented Generation (RAG) là gì?</h2>
+            <p>
+                RAG là phương pháp kết hợp giữa việc truy xuất thông tin từ nguồn dữ liệu bên ngoài và khả năng tạo văn bản của các mô hình ngôn ngữ lớn (LLM). Khác với việc chỉ dựa vào kiến thức có sẵn trong mô hình, RAG cho phép LLM truy cập và sử dụng thông tin từ các nguồn dữ liệu bên ngoài để tạo ra câu trả lời chính xác hơn.
+            </p>
+            
+            <div class="image-container">
+                <img src="{{ url_for('static',filename='images/rag-diagram.jpg')}}" alt="Sơ đồ hoạt động của RAG">
+                <p class="caption">Sơ đồ minh họa cách thức hoạt động của RAG</p>
+            </div>
+            
+            <p>
+                Quy trình hoạt động của RAG thường bao gồm các bước sau:
+            </p>
+            
+            <ol>
+                <li><strong>Chỉ mục hóa:</strong> Dữ liệu được chia thành các đoạn nhỏ và được chỉ mục để thuận tiện cho việc tìm kiếm.</li>
+                <li><strong>Truy xuất:</strong> Khi có một câu hỏi, hệ thống sẽ tìm kiếm các đoạn văn bản liên quan từ cơ sở dữ liệu.</li>
+                <li><strong>Tăng cường:</strong> Các đoạn văn bản liên quan được đưa vào ngữ cảnh cùng với câu hỏi.</li>
+                <li><strong>Tạo:</strong> Mô hình ngôn ngữ sử dụng thông tin từ cả câu hỏi và các đoạn truy xuất để tạo ra câu trả lời.</li>
+            </ol>
+            
+            <h2>2. AI Agents: Định nghĩa và khả năng</h2>
+            <p>
+                AI Agents (Tác nhân AI) là các hệ thống được thiết kế để hoạt động một cách tự chủ, có thể đưa ra quyết định và thực hiện các hành động để đạt được mục tiêu cụ thể. Không giống như các mô hình AI truyền thống chỉ đáp ứng các đầu vào, AI Agents có khả năng chủ động tương tác với môi trường, học hỏi từ trải nghiệm và điều chỉnh hành vi của mình.
+            </p>
+            
+            <h3>Các thành phần chính của một AI Agent:</h3>
+            <ul>
+                <li><strong>Nhận thức:</strong> Khả năng cảm nhận và hiểu môi trường.</li>
+                <li><strong>Suy luận:</strong> Khả năng xử lý thông tin và đưa ra quyết định logic.</li>
+                <li><strong>Học tập:</strong> Khả năng cải thiện hiệu suất dựa trên kinh nghiệm.</li>
+                <li><strong>Hành động:</strong> Khả năng thực hiện các hành động để đạt được mục tiêu.</li>
+                <li><strong>Tương tác:</strong> Khả năng giao tiếp với con người và các hệ thống khác.</li>
+            </ul>
+            
+            <h2>3. Agentic RAG: Sự kết hợp tiên tiến</h2>
+            <p>
+                Agentic RAG là sự kết hợp giữa khả năng truy xuất thông tin của RAG và tính tự chủ của AI Agents. Mô hình này không chỉ có thể truy xuất thông tin mà còn có thể chủ động quyết định cần truy xuất thông tin gì, khi nào cần truy xuất và làm thế nào để sử dụng thông tin đó một cách hiệu quả nhất.
+            </p>
+            
+            <div class="quote">
+                <p>"Agentic RAG đại diện cho bước tiến quan trọng trong việc tạo ra các hệ thống AI có khả năng tự chủ cao hơn và giải quyết các vấn đề phức tạp một cách hiệu quả."</p>
+                <cite>- Nghiên cứu từ Stanford AI Lab</cite>
+            </div>
+            
+            <h3>Ưu điểm của Agentic RAG:</h3>
+            <ol>
+                <li><strong>Tính linh hoạt:</strong> Có thể chủ động điều chỉnh chiến lược truy xuất tùy thuộc vào nhiệm vụ.</li>
+                <li><strong>Khả năng tổng hợp:</strong> Tích hợp thông tin từ nhiều nguồn khác nhau.</li>
+                <li><strong>Tính minh bạch:</strong> Có thể giải thích quá trình ra quyết định.</li>
+                <li><strong>Hiệu quả:</strong> Tối ưu hóa việc sử dụng tài nguyên tính toán và dữ liệu.</li>
+            </ol>
+            
+            <h2>4. Ứng dụng thực tế</h2>
+            <p>
+                Các công nghệ này đang được áp dụng trong nhiều lĩnh vực khác nhau:
+            </p>
+            
+            <ul>
+                <li><strong>Trợ lý ảo:</strong> Tạo ra các trợ lý thông minh hơn, có khả năng truy cập thông tin cập nhật.</li>
+                <li><strong>Y tế:</strong> Hỗ trợ chẩn đoán bệnh dựa trên dữ liệu y khoa cập nhật.</li>
+                <li><strong>Giáo dục:</strong> Tạo ra các hệ thống học tập cá nhân hóa.</li>
+                <li><strong>Nghiên cứu khoa học:</strong> Hỗ trợ phân tích tài liệu khoa học và đề xuất hướng nghiên cứu mới.</li>
+                <li><strong>Dịch vụ khách hàng:</strong> Cung cấp hỗ trợ khách hàng tự động với thông tin chính xác và cập nhật.</li>
+            </ul>
+            
+            <h2>5. Thách thức và tương lai</h2>
+            <p>
+                Mặc dù có nhiều tiềm năng, RAG, AI Agents và Agentic RAG vẫn phải đối mặt với những thách thức như:
+            </p>
+            
+            <ul>
+                <li>Đảm bảo tính chính xác và độ tin cậy của thông tin truy xuất.</li>
+                <li>Giải quyết vấn đề về quyền riêng tư và bảo mật dữ liệu.</li>
+                <li>Tối ưu hóa hiệu suất trên các bộ dữ liệu lớn.</li>
+                <li>Phát triển các phương pháp đánh giá hiệu quả.</li>
+            </ul>
+            
+            <p>
+                Trong tương lai, chúng ta có thể kỳ vọng vào sự phát triển của các mô hình Agentic RAG với khả năng tự chủ cao hơn, có thể tương tác với nhiều loại dữ liệu khác nhau và hỗ trợ con người trong các nhiệm vụ phức tạp.
+            </p>
+            
+            <h2>Kết luận</h2>
+            <p>
+                RAG, AI Agents và Agentic RAG đại diện cho những bước tiến quan trọng trong lĩnh vực AI. Bằng cách kết hợp khả năng truy xuất thông tin và tính tự chủ, các công nghệ này đang mở ra những khả năng mới cho việc phát triển các hệ thống AI thông minh hơn, có khả năng hỗ trợ con người trong nhiều lĩnh vực khác nhau.
+            </p>
+            
+            <p>
+                Khi các công nghệ này tiếp tục phát triển, chúng ta có thể mong đợi những ứng dụng mới và đột phá trong cách chúng ta tương tác với AI và sử dụng AI để giải quyết các vấn đề phức tạp trong thế giới thực.
+            </p>
+        </div>
+        
+        <div class="article-footer">
+            <div class="tags-section">
+                <h4>Tags:</h4>
+                <div class="tags">
+                    <a href="/tags/ai" class="tag">AI</a>
+                    <a href="/tags/rag" class="tag">RAG</a>
+                    <a href="/tags/development" class="tag">Development</a>
+                    <a href="/tags/machine-learning" class="tag">Machine Learning</a>
+                    <a href="/tags/llm" class="tag">LLM</a>
+                </div>
+            </div>
+            
+            <div class="author-bio">
+                <img src="{{ url_for('static',filename='images/avatar2.jpg')}}" class="avatar-large" alt="Vũ Tuấn">
+                <div class="bio-content">
+                    <h4>Về tác giả</h4>
+                    <h3>Vũ Tuấn</h3>
+                    <p>Vũ Tuấn là một kỹ sư AI với hơn 5 năm kinh nghiệm trong lĩnh vực học máy và xử lý ngôn ngữ tự nhiên. Anh hiện đang làm việc tại một công ty công nghệ hàng đầu và thường xuyên chia sẻ kiến thức về AI trên blog cá nhân và các diễn đàn công nghệ.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="comments">
+    <div class="container">
+        <h3>Bình luận (0)</h3>
+        
+        <div class="comment-form">
+            <textarea placeholder="Viết bình luận của bạn..."></textarea>
+            <button class="btn-primary">Gửi bình luận</button>
+        </div>
+    </div>
+</section>
+
+<section id="related-posts">
+    <div class="container">
+        <h3>Bài viết liên quan</h3>
+        
+        <div class="related-list">
+            <div class="related-item">
+                <a href="/posts/llm-overview">
+                    <h4>Tổng quan về Large Language Models và ứng dụng trong thực tế</h4>
+                </a>
+                <div class="post-meta">
+                    <span class="author">Nguyễn Văn A</span>
+                    <span class="time">3 ngày trước</span>
+                </div>
+            </div>
+            
+            <div class="related-item">
+                <a href="/posts/prompt-engineering">
+                    <h4>Kỹ thuật Prompt Engineering: Tối ưu hóa tương tác với AI</h4>
+                </a>
+                <div class="post-meta">
+                    <span class="author">Trần Thị B</span>
+                    <span class="time">1 tuần trước</span>
+                </div>
+            </div>
+            
+            <div class="related-item">
+                <a href="/posts/ai-tools-2025">
+                    <h4>Top 10 công cụ AI hàng đầu năm 2025 cho nhà phát triển</h4>
+                </a>
+                <div class="post-meta">
+                    <span class="author">Lê Văn C</span>
+                    <span class="time">2 tuần trước</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+{% endblock %}

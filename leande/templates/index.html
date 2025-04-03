@@ -1,23 +1,131 @@
 {% extends "layout/base.html" %}
-
- {% block css %}
- <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css')}}">
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css')}}">
 {% endblock %}
-
 {% block content %}
-<section id="intro">
+<section id="intro" class="mb-5">
     <div class="intro-container">
         <div class="intro-text">
-            <h2>Chào Mừng Bạn Đến Với iLeande!</h2>
-            <p>iLeande là nền tảng giúp bạn khám phá, học hỏi và tạo ra những sáng tạo đột phá trong công việc và cuộc sống. Tại đây, chúng tôi cung cấp các công cụ hữu ích, bài viết chất lượng và các dịch vụ giúp bạn tối ưu hóa mọi lĩnh vực từ công nghệ đến cuộc sống hàng ngày.</p>
-            <p>Chúng tôi tin rằng tương lai của bạn là do chính bạn tạo ra. Với các tài nguyên phong phú và công cụ hỗ trợ, iLeande đồng hành cùng bạn trong việc xây dựng tương lai vững chắc hơn. Khám phá các bài viết chuyên sâu, tham gia các công cụ và dịch vụ độc đáo mà chúng tôi cung cấp để phát triển bản thân và công việc của bạn.</p>
-            <p>Hãy bắt đầu hành trình của bạn ngay hôm nay và để chúng tôi giúp bạn tiến xa hơn nữa!</p>
-            <a href="#get-started" class="btn-primary">Khám Phá Ngay</a>
-        </div>
-        <div class="intro-image">
-            <img src="your-image.jpg" alt="Chào mừng đến với iLeande" />
+            <h1>iLeande</h1>
+            <p class="lead">Nền tảng chia sẻ kiến thức và công nghệ</p>
         </div>
     </div>
 </section>
 
+<section id="blog-posts">
+    <div class="container">
+        <div class="section-title">
+            <h2>Bài Viết Mới Nhất</h2>
+        </div>
+        
+        <div class="post-list">
+            <!-- Bài viết 1 -->
+            <div class="post-item">
+                <div class="post-author">
+                    <img src="{{ url_for('static',filename='images/avatar1.jpg')}}" class="avatar" alt="Thái Thịnh">
+                    <div class="author-info">
+                        <a href="/author/thai-thinh" class="author-name">Thái Thịnh</a>
+                        <span class="post-time">khoảng 4 giờ trước - 2 phút đọc</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3 class="post-title">
+                        <a href="/posts/react-optimization">Cách tối ưu hóa ứng dụng React để cải thiện hiệu suất</a>
+                    </h3>
+                    <div class="post-tags">
+                        <span class="tag">React</span>
+                    </div>
+                    <div class="post-stats">
+                        <span><i class="fas fa-eye"></i> 26</span>
+                        <span><i class="fas fa-bookmark"></i> 0</span>
+                        <span><i class="fas fa-comment"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài viết 2 -->
+            <div class="post-item">
+                <div class="post-author">
+                    <img src="{{ url_for('static',filename='images/avatar2.jpg')}}" class="avatar" alt="Vũ Tuấn">
+                    <div class="author-info">
+                        <a href="/author/vu-tuan" class="author-name">Vũ Tuấn</a>
+                        <span class="post-time">khoảng 5 giờ trước - 5 phút đọc</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3 class="post-title">
+                        <a href="/posts/ai-agents">RAG, AI Agents và Agentic RAG – Chúng là gì và hoạt động như thế nào?</a>
+                    </h3>
+                    <div class="post-tags">
+                        <span class="tag">development</span>
+                    </div>
+                    <div class="post-stats">
+                        <span><i class="fas fa-eye"></i> 20</span>
+                        <span><i class="fas fa-bookmark"></i> 0</span>
+                        <span><i class="fas fa-comment"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài viết 3 -->
+            <div class="post-item">
+                <div class="post-author">
+                    <img src="{{ url_for('static',filename='images/avatar3.jpg')}}" class="avatar" alt="Gung Typical">
+                    <div class="author-info">
+                        <a href="/author/gung-typical" class="author-name">Gung Typical</a>
+                        <span class="post-time">khoảng 5 giờ trước - 9 phút đọc</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3 class="post-title">
+                        <a href="/posts/dev-productivity-tools">5 Công cụ giúp nâng cao năng suất lập trình viên và thay đổi cách làm việc 2025</a>
+                    </h3>
+                    <div class="post-tags">
+                        <span class="tag">Tool</span>
+                    </div>
+                    <div class="post-stats">
+                        <span><i class="fas fa-eye"></i> 48</span>
+                        <span><i class="fas fa-bookmark"></i> 0</span>
+                        <span><i class="fas fa-comment"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bài viết 4 -->
+            <div class="post-item">
+                <div class="post-author">
+                    <img src="{{ url_for('static',filename='images/avatar4.jpg')}}" class="avatar" alt="Vinh Phạm">
+                    <div class="author-info">
+                        <a href="/author/vinh-pham" class="author-name">Vinh Phạm</a>
+                        <span class="post-time">khoảng 6 giờ trước - 13 phút đọc</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3 class="post-title">
+                        <a href="/posts/serverless-tools">Bộ công cụ tốt nhất cho lập trình viên Serverless & Cloud-Native năm 2025</a>
+                    </h3>
+                    <div class="post-tags">
+                        <span class="tag">development</span>
+                    </div>
+                    <div class="post-stats">
+                        <span><i class="fas fa-eye"></i> 16</span>
+                        <span><i class="fas fa-bookmark"></i> 0</span>
+                        <span><i class="fas fa-comment"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pagination">
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link next">→</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 {% endblock %}
