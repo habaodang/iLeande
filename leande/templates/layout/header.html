@@ -13,10 +13,18 @@
         </ul>
     </nav>
     <div class="account">
-        <a href="#">
+        {% if log %}
+        <a href="{{url_for('main.logout')}}">
+            <button >
+                Đăng xuất
+            </button>
+            </a>
+        {% else %}
+        <a href="{{url_for('main.login')}}">
             <button >
                 Đăng nhập
             </button>
             </a>
+        {% endif %}
     </div>
 </header>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Form</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css')}}">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-toggle">
+            <button id="loginBtn" class="active">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+
+        <form id="loginForm" class="form" method="post" action="{{url_for('main.login')}}">
+            <h2>Login Here</h2>
+            <label>Username</label>
+            <input  name="name" type="text" placeholder="Email or Phone" required>
+
+            <label>Password</label>
+            <input name="pw" type="password" placeholder="Password" required>
+
+            <button type="submit" class="submit-btn">Log In</button>
+{% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                        {% for category, message in messages %}
+                        <div id="mess_erro">{{ message }}</div>
+
+                        {% endfor %}
+                        {% endif %}
+                        {% endwith %}
+            <p class="social-text">Login with a social media account</p>
+            <div class="social-icons">
+                <a href="#"><img src="static/img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="static/img/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="static/img/instagram.png" alt="Instagram"></a>
+            </div>
+        </form>
+
+        <form id="registerForm" class="form hidden" method="post" action="{{url_for('main.register')}}">
+            <h2>Create Account</h2>
+            <label>Username</label>
+            <input name="name" type="text" placeholder="Username" required>
+
+            <label>Password</label>
+            <input name="pw" type="password" placeholder="Password" required>
+            <label>Confirm Password</label>
+            <input name="cpw" type="password" placeholder="Confirm Password" required>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

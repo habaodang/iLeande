@@ -1,0 +1,109 @@
+/* Background image */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    font-family: 'Poppins', sans-serif;
+    background: url('https://i.pinimg.com/736x/1b/be/92/1bbe92503f46be3f720403804b5043a4.jpg') no-repeat center center/cover;
+  width: 100%;
+    height: 100%;
+}
+
+/* Form container */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 320px;
+    margin: 100px auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+}
+
+/* Toggle buttons */
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+}
+
+.form-toggle button.active {
+    border-bottom: 2px solid white;
+}
+
+/* Form fields */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form.hidden {
+    display: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: white;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* Submit button */
+.submit-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Social login */
+.social-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 32px;
+    margin: 0 8px;
+
+    transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
